@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Collection</title>
+    <style>
+        /* Add simple styles for a better look */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .song-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .song-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+            width: 150px;
+            text-align: center;
+        }
+        .song-box img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Music Collection</h1>
+    
+    <div class="song-container">
+        <!-- Song Box 1 -->
+        <div class="song-box" onclick="playSong('POP SMOKE - GET BACK 320 [WWW.VIPREMIX.IR].mp3')">
+            <img src="1jezkmdl82m51 copy.png" alt="Song 1 Cover">
+            <p>Song 1 Name</p>
+        </div>
+        
+        <!-- Song Box 2 -->
+        <div class="song-box" onclick="playSong('Pattern 1.wav')">
+            <img src="06e6e02f5ef47ea03a673877f92851b4.jpg" alt="Song 2 Cover">
+            <p>Song 2 Name</p>
+        </div>
+        
+        <!-- Add more song boxes as needed -->
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="audioPlayer" controls style="display:none;"></audio>
+
+    <!-- JavaScript for Playing Songs -->
+    <script>
+        function playSong(file) {
+            var player = document.getElementById('audioPlayer');
+            player.src = file;
+            player.style.display = 'block';
+            player.play();
+        }
+    </script>
+</body>
+</html>
